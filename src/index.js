@@ -79,35 +79,3 @@ function decode(expr) {
 module.exports = {
     decode
 };
-
-/*
-Можно еще решить так, вроде проще, но захотелось попробовать через map
-
-let str = '';
-let result = [];
-
-for(let i = 0; i < expr.length / 10; i++) {
-    result.push(expr.substr(i * 10, 10));
-}
-
-result.forEach(item => {
-    if (item === '**********') {
-        str += ' ';
-    } else {
-        let letter = '';
-        for(let j = 0; j < 5; j++) {
-            switch(item.substr(j * 2, 2)) {
-                case '10':
-                    letter += '.';
-                    break;
-                case '11':
-                    letter += '-';
-                    break;
-            }        
-        }
-        str += MORSE_TABLE[letter];
-    }
-});
-return str;
-}
-*/
